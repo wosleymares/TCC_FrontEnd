@@ -1,0 +1,101 @@
+mat-card-content{
+  display: flex;
+  width: 100%;
+}
+mat-card{
+display: flex;
+margin-top: 10px;
+max-width: 500px;
+max-height: auto;
+margin: 5rem auto;
+text-align: center;
+justify-content: center;
+align-items: center;
+background-color: rgb(222, 234, 230);
+}
+
+mat-form-field{
+margin-top: 0;
+padding: 0 40px 0 35px;
+width: 300px;
+height: auto;
+}
+
+mat-form-field input{
+
+width: 400px;
+padding: 15px 15px 10px 10px;
+padding: 1px 10px 5px 10px;
+border-radius: 5px;
+bottom: 1rem;
+border: none;
+margin-bottom:0;
+}
+
+.full-width-input {
+width: 90%;
+margin:0 ;
+padding: 2px 2px 2px 2px;
+}
+
+.signin-form mat-card-header{
+  margin: 5px 10px auto;
+  bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: rgba(14, 15, 22, 0.564);
+}
+
+
+button{
+display: flex;
+width: 310px;
+align-items: center;
+justify-content: center;
+}
+
+.btn-submit{
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 5px 10px 5px 5px;
+align-items: center;
+margin-bottom: 5px;
+height: 10vh;
+color: white;
+font-weight: bold;
+font-size: 1.2rem;
+cursor: pointer;
+border: 5px;
+}
+
+.btn-submit button{
+background-color: rgb(99, 156, 217);
+}
+
+.btn-submit button:hover{
+background-color: rgb(96, 141, 189);
+}
+
+@media screen and (max-width: 768px) {
+
+.signin-form{
+display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2px 1px;
+  text-align: center;
+}
+
+.full-width-input {
+width: 100%;
+}
+
+mat-card-content button{
+justify-content: center;
+width: 80%;
+margin: 10px 30px;
+}
+}
+

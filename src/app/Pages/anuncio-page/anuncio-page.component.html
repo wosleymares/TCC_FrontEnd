@@ -1,0 +1,24 @@
+<div class="container mt-5 mt5">
+  <div class="row">
+    <div class="col-lg-6" *ngIf="anuncioData">
+      <div class="foodbox">
+        <button routerLink="../../anuncio" class="btn btn-sm btn-warning md-2">Voltar Anuncio</button>
+
+        <img src="{{ anuncioData[0].foodImg }}" width="100%" />
+        <h1>{{ anuncioData[0].foodName }}</h1>
+        <p>{{ anuncioData[0].foodDetails }}</p>
+        <p>{{ anuncioData[0].foodPrice | currency : "BRL" }}</p>
+      </div>
+      <div class="col-lg-6">
+        <h1 class="textfa-center"> Detalhes do Cliente</h1>
+        <form action="">
+            <input type="text" class="form-control" placeholder="Digite seu nome completo ">
+            <input type="text" class="form-control" placeholder="Digite seu telefone ">
+            <button class="btn btn-md btn-success mt-3"> Clique Para Alugar </button>
+        </form>
+
+      </div>
+    </div>
+</div>
+
+</div>

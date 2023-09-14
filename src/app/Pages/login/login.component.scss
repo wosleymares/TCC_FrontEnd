@@ -1,0 +1,108 @@
+mat-card-content{
+  display: flex;
+}
+
+mat-card{
+  display: flex;
+  margin-top: 3rem;
+  max-width: 450px;
+  max-height: auto;
+  margin: 3rem auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(222, 234, 230);
+}
+
+mat-form-field{
+margin-top: 0;
+margin:0;
+padding:0;
+width: 100%;
+text-decoration: none;
+border: none;
+}
+
+mat-form-field input{
+margin-top: 1.2rem;
+margin:0;
+margin-bottom: auto;
+width: 370px;
+padding: 1px 10px 5px 10px;
+border-radius: 10px;
+bottom: 2rem;
+border: none;
+text-decoration: none;
+
+}
+
+mat-card-content mat-card-subtitle a{
+text-decoration: none;
+font-size: 17px;
+}
+
+mat-card-content mat-card-subtitle{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+mat-card-content button{
+display: flex;
+width: 310px;
+align-items: center;
+justify-content: center;
+padding: 15px;
+margin: 10px 15px 15px 20px;
+margin-bottom: 20px;
+}
+
+mat-card-content p{
+  font-size: 3rem;
+}
+
+.btn-enviar{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+height: 10vh;
+color: white;
+font-weight: bold;
+font-size: 1.2rem;
+}
+
+.btn-enviar button{
+background-color: rgb(99, 156, 217);
+}
+
+.btn-enviar button:hover{
+background-color: rgb(96, 141, 189);
+}
+
+.full-width-input {
+  width: 95%;
+  margin:0;
+  padding: 2px 2px 2px 2px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .signin-form{
+    display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2px 1px;
+      text-align: center;
+  }
+
+  .full-width-input {
+    width: 100%;
+  }
+
+  mat-card-content button{
+    justify-content: center;
+    width: 80%;
+    margin: 10px 30px;
+  }
+}

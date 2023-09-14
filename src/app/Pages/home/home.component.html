@@ -1,0 +1,243 @@
+<!--Carousel inicio-->
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div id="carouselExampleCaptions" class="carousel slide resize-carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../../assets/imagens/dec2.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block backgroud-text">
+            <h5>Decoração de festa</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+            <a href="#" class="btn btn-info">Reservar</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../assets/imagens/cha_bb.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block backgroud-text">
+            <h5>Chá de bebê</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+            <a href="#" class="btn btn-info">Reservar</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../assets/imagens/dec10.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block backgroud-text">
+            <h5>Locação de Itens</h5>
+            <p>Third slide label.</p>
+            <a href="#" class="btn btn-info">Reservar</a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!--Carousel fim-->
+
+<!--Campo de Pesquisa inicio-->
+<div class="container">
+    <br>
+    <div class="row">
+      <div class="card mb-3">
+        <br>
+    <legend>Buscar Evento</legend>
+  <br>
+    <form>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <div class="container">
+                <div class="row">
+              <label for="txtlocal" class="form-label">Localização </label><br>
+              <input type="text" class="form-control" id="txtlocal"
+              name="local"   >
+          </div>
+          <br><br>
+        <mat-form-field>
+        <mat-label>Data do Evento</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br><br><br>
+        <mat-radio-group aria-label="Select an option">
+            <mat-panel-title>
+                Qual dia da semana?
+              </mat-panel-title><br>
+            <mat-radio-button value="seg">Segunda</mat-radio-button>
+            <mat-radio-button value="ter">Terça</mat-radio-button>
+            <mat-radio-button value="qua">Quarta</mat-radio-button>
+            <mat-radio-button value="qui">Quinta</mat-radio-button><br>
+            <mat-radio-button value="sex">Sexta</mat-radio-button>
+            <mat-radio-button value="sab">Sábado</mat-radio-button>
+            <mat-radio-button value="dom">Domingo</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        </div>
+        </div>
+        <div class="col">
+            <div class="mb-3">
+              <label for="validationCustom04" class="form-label">Tipo de Evento</label>
+              <select name='evento' class="form-select" id="validationCustom04" required    >
+                <option selected disabled value="">* Selecione o Evento *</option>
+                <option value="aniversario">Aniversário</option>
+                <option value="bodas">Bodas</option>
+                <option value="casamento">Casamento</option>
+                <option value="casamento">Chá de bebê</option>
+                <option value="debutantes">Debutantes</option>
+                <option value="institucional">Institucional</option>
+              </select>
+              <div class="invalid-feedback">
+              </div>
+              <br>
+              <div class="col">
+                <div class="mb-3">
+              <label for="validationCustom04" class="form-label">Valor por pessoa</label>
+              <select name='valor' class="form-select" id="validationCustom04" required    >
+                <option selected disabled value="">* Selecione o Valor *</option>
+                <option value="o a 100">R$ 0,00 à R$ 100,00</option>
+                <option value="101 a 200">R$ 101,00 À R$ 200,00</option>
+                <option value="201 a 300">R$ 210,00 À R$ 300,00</option>
+                <option value="301 a 400">R$ 301,00 À R$ 400,00</option>
+                <option value="401 a 500">R$ 401,00 À R$ 500,00</option>
+                <option value="501 a 1000">R$ 501,00 À R$ 1000,00</option>
+              </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+            <label for="validationCustom04" class="form-label">Período</label>
+            <select name='periodo' class="form-select" id="validationCustom04" required    >
+              <option selected disabled value="">* Selecione o Período *</option>
+              <option value="manhã">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+            </select>
+            </div>
+          </div>
+          </div><br>
+          <button mat-raised-button color="primary" (click)="anuncioPage()">Pesquisar Evento</button>
+    <br>
+    <br>
+  </div>
+    </div>
+    </form>
+    <div>
+    </div>
+    <br>
+    </div>
+</div>
+<!--Campo de Pesquisa fim-->
+
+<!--Cards inicio-->
+<div class="container">
+<div class="card-group">
+    <div class="card">
+     <div class="card-body">
+        <img src="../../assets/imagens/buf1.jpg" class="rounded mx-auto d-block" width="250" height="150" alt="...">
+        <br>
+        <h5 class="card-title text-center">Mesa de Frios<br>R$ 45,00 Por Pessoa</h5>
+        <br>
+        <p class="card-text fw-lighter " >On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.</p>
+        <br>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="btn btn-info">Reservar</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <img src="../../assets/imagens/bolo4.jpg" class="rounded mx-auto d-block" width="250" height="150" alt="...">
+        <br>
+        <h5 class="card-title text-center">Bolo Clásico<br> R$ 1.500,00 </h5>
+        <br>
+        <p class="card-text fw-lighter">L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' de mise en page est qu'il possède une distribution de lettres plus ou moins normale.</p>
+        <br>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="btn btn-info">Reservar</a>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <img src="../../assets/imagens/dia_noi.jpg" class="rounded mx-auto d-block" width="250" height="150"alt="...">
+        <br>
+        <h5 class="card-title text-center">Dia da Noiva <br>R$ 999,00</h5>
+        <br>
+        <p class="card-text fw-lighter">De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du de mise en page Lorem Ipsum leur faux texte par défaut, et une recherche pour vous conduira</p>
+        <br>
+        <div class="d-flex justify-content-center">
+          <a href="#" class="btn btn-info">Reservar</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+          <img src="../../assets/imagens/kit_fest2.jpg" class="rounded mx-auto d-block" width="250" height="150"alt="...">
+          <br>
+          <h5 class="card-title text-center">Kit Festa<br>R$ 499,00</h5>
+          <br>
+          <p class="card-text fw-lighter">De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait de mise en page  de mise en pagedu Lorem Ipsum leur faux texte par défaut</p>
+          <br><br>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-info">Reservar</a>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</div>
+
+</div>
