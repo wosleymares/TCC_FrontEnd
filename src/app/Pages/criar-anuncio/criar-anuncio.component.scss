@@ -47,6 +47,14 @@ padding: 2px 2px 2px 2px;
   color: rgba(14, 15, 22, 0.564);
 }
 
+.signin-form a {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+  width: 80px;
+  justify-content: right;
+}
+
 
 button{
 display: flex;

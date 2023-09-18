@@ -3,7 +3,7 @@ mat-card{
     align-items: center;
     justify-content: center;
     max-width: 400px;
-    height: 370px;
+    height: 440px;
     margin: 2rem auto;
     margin-top: 2rem;
     text-align: center;
@@ -16,3 +16,10 @@ mat-card{
         margin-top: 25px;
     }
 
+    .signin-form mat-card a {
+      display: flex;
+      align-items: center;
+      margin: 10px 10px;
+      width: 80px;
+      justify-content: right;
+    }

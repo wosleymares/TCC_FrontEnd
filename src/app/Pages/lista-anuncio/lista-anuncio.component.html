@@ -1,17 +1,16 @@
-<!-- src/app/product-list/product-list.component.html -->
-<div class="card">
-  <div class="card-body">
-    <div class="row">
-      <ul>
-        <li *ngFor="let product of products">
+
+<a href="home" class="btn btn-success" >Voltar</a>
+<div class="d-flex justify-content-center text-center flex-rap">
+
+    <div *ngFor="let product of products" class="card mx-2 my-2" style="width: 18rem;">
           <h3>{{ product.titulo }}</h3>
-          <img [src]="product.imgUrl" alt="{{ product.imgUrl }}" width="300">
+          <img [src]="product.imgUrl" alt="{{ product.imgUrl }}" height="250px" class="card-img-top">
+        <div class="card-body">
           <p>Descrição: {{ product.descricao }}</p>
           <p>Preço: R$ {{ product.valor }}</p>
-          <p>Telefone: {{ product.telefone }}</p><br><br>
-        </li>
-      </ul>
+          <p>Telefone: {{ product.telefone }}</p>
+        </div>
+          <a class="btn btn-warning" >Editar</a>
+          <a *ngIf="product && product.id"  class="btn btn-danger" (click)="delete()">Excluir</a>
     </div>
-  </div>
 </div>
-
