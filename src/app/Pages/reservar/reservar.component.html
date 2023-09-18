@@ -13,13 +13,6 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="full-width-input">
-          <input matInput type="text" placeholder="Buffet" formControlName="buffet" required>
-          <mat-error *ngIf="isFieldInvalid('buffet')">
-            Informe o nome do buffet!
-          </mat-error>
-        </mat-form-field>
-
         <mat-form-field>
           <mat-label>Data do Evento</mat-label>
           <input matInput [matDatepicker]="picker">
@@ -33,7 +26,7 @@
         </mat-form-field>
 
         <div class="btn-submit">
-          <a href="pagamento" class="btn btn-info">Pagar</a>
+          <a href="pagamento" class="btn btn-info">Contratar</a>
         </div>
       </form>
     </mat-card-content>
