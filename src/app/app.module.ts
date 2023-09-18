@@ -20,19 +20,25 @@ import { EmpresaComponent } from './Pages/empresa/empresa.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { ReservarComponent } from './Pages/reservar/reservar.component';
-
-
-
+import { PopupComponent } from './popup/popup.component';
+import { PopupService } from './services/popup.service';
+import { ListaAnuncioComponent } from './Pages/lista-anuncio/lista-anuncio.component';
+import { FormsModule } from '@angular/forms';
+import { ProductService } from './services/product.service';
+import { PagamentoComponent } from './Pages/pagamento/pagamento.component';
+import { DialogComponent } from './Pages/pagamento/dialog/dialog.component';
+import { BolosComponent } from './Pages/bolos/bolos.component';
+import { DecoraComponent } from './Pages/decora/decora.component';
+import { PesquisaComponent } from './Pages/pesquisa/pesquisa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    CriarAnuncioComponent,
     AnuncioComponent,
     AnuncioPageComponent,
     AboutComponent,
-
+    ListaAnuncioComponent,
 
   ],
   imports: [
@@ -49,9 +55,18 @@ import { ReservarComponent } from './Pages/reservar/reservar.component';
     HttpClientModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    ReservarComponent
+    ReservarComponent,
+    PopupComponent,
+    FormsModule,
+    CriarAnuncioComponent,
+    PagamentoComponent,
+    DialogComponent,
+    PesquisaComponent,
+    BolosComponent,
+    DecoraComponent,
+
   ],
-  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }],
+  providers: [[ProductService],[PopupService],{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

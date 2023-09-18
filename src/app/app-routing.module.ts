@@ -6,7 +6,13 @@ import { AnuncioPageComponent } from './Pages/anuncio-page/anuncio-page.componen
 import { AnuncioComponent } from './Pages/anuncio/anuncio.component';
 import { CriarAnuncioComponent } from './Pages/criar-anuncio/criar-anuncio.component';
 import { EmpresaComponent } from './Pages/empresa/empresa.component';
+import { ListaAnuncioComponent } from './Pages/lista-anuncio/lista-anuncio.component';
 import { authGuard } from './services/guards/auth.guard';
+import { PagamentoComponent } from './Pages/pagamento/pagamento.component';
+import { DialogComponent } from './Pages/pagamento/dialog/dialog.component';
+import { PesquisaComponent } from './Pages/pesquisa/pesquisa.component';
+import { DecoraComponent } from './Pages/decora/decora.component';
+import { BolosComponent } from './Pages/bolos/bolos.component';
 import { ReservarComponent } from './Pages/reservar/reservar.component';
 
 const routes: Routes = [
@@ -19,9 +25,21 @@ const routes: Routes = [
 
       { path: 'anuncio-page', component: AnuncioPageComponent},
 
-      { path: 'reservar', component: ReservarComponent},
+      { path: 'lista-anuncios', component: ListaAnuncioComponent},
 
       { path: 'criar-anuncio', component: CriarAnuncioComponent, canActivate:[authGuard]},
+
+      { path: 'pagamento', component: PagamentoComponent },
+
+      { path: 'dialog', component: DialogComponent },
+
+      { path: 'pesquisa', component: PesquisaComponent },
+
+      { path: 'decora', component: DecoraComponent},
+
+      { path: 'bolos', component: BolosComponent},
+
+      { path: 'reservar', component: ReservarComponent,canActivate:[authGuard]},
 
       {
         path:'',

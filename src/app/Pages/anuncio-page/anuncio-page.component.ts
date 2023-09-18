@@ -25,4 +25,4 @@ export class AnuncioPageComponent implements OnInit{
     }
   }
 
-  }
+}

@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AuthService } from 'src/app/services/auth.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -38,17 +39,24 @@ export class LoginComponent implements OnInit{
 
   auth = inject(AuthService);
 
+  router = inject(Router);
+
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      email: ['', Validators.required],
-      senha: ['', Validators.required],
+      id: [''],
+      email: ['',[Validators.required, Validators.minLength(6)]],
+      senha: ['',[Validators.required, Validators.minLength(6)]],
     });
 
   }
 
   login() {
     this.auth.login(this.loginForm.value);
+    this.loginForm.reset();
+    this.router.navigate(['../home']);
   }
+
+
 
   isFieldInvalid(field: string) {
 
@@ -56,5 +64,7 @@ export class LoginComponent implements OnInit{
       (!this.loginForm.get(field)?.valid && this.loginForm.get(field)?.touched) ||
       (this.loginForm.get(field)?.untouched && this.formSubmited)
     );
+
   }
+
 }

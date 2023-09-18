@@ -1,159 +1,101 @@
-
-form h4{
-    margin-top: 1rem;
-    margin-bottom: 10px;
-    display: flex;
-    font-weight: bold;
-    justify-content: center;
-}
-
-form{
-  max-width: 550px;
-  max-height: 100%;
-  margin: 1rem auto;
-  margin-top: 3%;
-  margin-bottom: 10%;
-  border-radius: 2px;
-  background-color: rgb(222, 234, 230);
-}
-
-.form-group{
+mat-card-content{
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1.1em;
+  width: 100%;
+}
+mat-card{
+display: flex;
+margin-top: 10px;
+max-width: 500px;
+max-height: auto;
+margin: 5rem auto;
+text-align: center;
+justify-content: center;
+align-items: center;
+background-color: rgb(222, 234, 230);
 }
 
-.form-group input{
-  width: 450px;
-  font-weight: bold;
-  font-size: 0.9em;
-  margin-top: 0.4em;
-  margin: 0.1rem 25px;
-  padding: 1rem 1.2rem 10px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 1px 1px 6px #ca45451c;
+mat-form-field{
+margin-top: 0;
+padding: 0 40px 0 35px;
+width: 300px;
+height: auto;
 }
 
-.form-group input:hover{
-  background-color: #96c4dc75;
+mat-form-field input{
+
+width: 400px;
+padding: 15px 15px 10px 10px;
+padding: 1px 10px 5px 10px;
+border-radius: 5px;
+bottom: 1rem;
+border: none;
+margin-bottom:0;
 }
 
-.form-group label{
-  font-weight: bold;
-  font-size: .9em;
-  margin-top: .4em;
-  margin: 0.1rem 10px;
-  padding: 0.8rem 5px 1.2rem 20px;
-  border: none;
-  border-radius: 10px;
+.full-width-input {
+width: 90%;
+margin:0 ;
+padding: 2px 2px 2px 2px;
 }
 
-.form-group textarea{
-  padding: 0.6em;
-  color: black;
-  font-size: 0.8em;
-}
-
-.inputs,.list[type="checkbox"]{
-  font-weight: bold;
-  font-size: .9em;
-  margin-top: 10px;
-  margin: 5px;
-  padding: 0.9rem;
-  border: none;
-}
-
-.inputs label:hover{
-  background-color: #16b9eb75;
-  box-shadow: 1px 1px 6px rgb(190, 219, 227);
-}
-
-input[type="submit"]{
-  background-color: #efefef;
-  border: 2px solid transparent;
-  padding: 0.6em 1em;
-  font-weight: bold;
-  font-size: 1.1em;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.btn-enviar{
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  padding: 0;
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: 0.4s;
-  justify-content: center;
-}
-
-.btn-enviar button{
-    justify-content: center;
-    border: none;
-    background-color: rgb(99, 156, 217);
-    padding: 0.7rem, 1.1rem ;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 15px;
-}
-
-.btn-enviar button:hover {
-  background-color: rgb(96, 141, 189);
-}
-
-.btn-enviar [type="submit"]{
-    color: white;
-    font: bold;
-}
-
-.image-container{
-  display: flex;
+.signin-form mat-card-header{
+  margin: 5px 10px auto;
+  bottom: 1rem;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-
-.image-container span{
-  align-items: center;
-  justify-content: center;
+  font-size: 2rem;
+  color: rgba(14, 15, 22, 0.564);
 }
 
 
-.image-container input{
-  align-items: center;
-  justify-content: center;
+button{
+display: flex;
+width: 310px;
+align-items: center;
+justify-content: center;
 }
 
-.image-container input [type="file"]{
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 10px;
+.btn-submit{
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 5px 10px 5px 5px;
+align-items: center;
+margin-bottom: 5px;
+height: 10vh;
+color: white;
+font-weight: bold;
+font-size: 1.2rem;
+cursor: pointer;
+border: 5px;
+}
+
+.btn-submit button{
+background-color: rgb(99, 156, 217);
+}
+
+.btn-submit button:hover{
+background-color: rgb(96, 141, 189);
 }
 
 @media screen and (max-width: 768px) {
 
-    form{
-      display: block;
-        width: 100%;
-        margin: 0 auto;
-        padding: 2px 1px;
-        text-align: center;
-    }
-    .form-group input{
-      display: block;
-      width: 320px;
-
-    }
-
+.signin-form{
+display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2px 1px;
+  text-align: center;
 }
 
+.full-width-input {
+width: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-card-content button{
+justify-content: center;
+width: 80%;
+margin: 10px 30px;
+}
+}
 

@@ -11,32 +11,36 @@
           <mat-form-field class="full-width-input">
             <input matInput type="text" placeholder="Nome:" formControlName="nome" required>
             <mat-error *ngIf="isFieldInvalid('nome')">
-                Informe seu nome
+                Informe seu nome*
             </mat-error>
           </mat-form-field>
 
           <mat-form-field class="full-width-input">
             <input matInput type="number" placeholder="Telefone" formControlName="telefone" required>
             <mat-error *ngIf="isFieldInvalid('telefone')">
-              Informe um número, mínimo 8 caracteres.
+              Informe o telefone, mínimo 8 caracteres*
             </mat-error>
           </mat-form-field>
 
           <mat-form-field class="full-width-input">
             <input matInput type="email" placeholder="Email:" formControlName="email" required>
             <mat-error *ngIf="isFieldInvalid('email')">
-              Informe um email válido.
+              Informe um email válido*
             </mat-error>
           </mat-form-field>
 
           <mat-form-field class="full-width-input">
             <input matInput type="password" placeholder="Senha:" formControlName="senha" required>
             <mat-error *ngIf="isFieldInvalid('senha')">
-              Informe uma senha, mínimo 6 caracteres.
+              Informe uma senha, mínimo 6 caracteres*
             </mat-error>
           </mat-form-field>
             <div class="btn-submit">
             <button mat-raised-button type="submit">Enviar</button>
+            </div>
+
+            <div *ngIf="cadastroSucesso" class="alert alert-success">
+              Cadastro realizado com sucesso!
             </div>
         </form>
       </mat-card-content>

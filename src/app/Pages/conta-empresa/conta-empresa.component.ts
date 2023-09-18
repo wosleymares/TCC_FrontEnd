@@ -7,6 +7,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { Router } from '@angular/router';
+import { PopupService } from 'src/app/services/popup.service';
 
 @Component({
   selector: 'app-conta-empresa',
@@ -21,14 +23,15 @@ export class ContaEmpresaComponent{
 
   private formSubmited!: boolean;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private popupService: PopupService) {
+
       this.formEmpresa = this.fb.group({
+        id: [''],
       nome: ['', Validators.required],
       senha: ['', [Validators.required, Validators.minLength(6)]],
       email: ['', [Validators.required, Validators.email]],
       endereco: ['', Validators.required],
       cpf_cnpj: ['', [Validators.required, Validators.minLength(11)]],
-      data_nascimento: ['', Validators.required],
       telefone: ['', [Validators.required, Validators.minLength(8)]]
 
     })
@@ -42,6 +45,13 @@ export class ContaEmpresaComponent{
       this.http.post('http://localhost:8080/clientes',dados).subscribe(response =>(
         //Tratando a resposta da API,se necessário
         console.log('Dados enviados com sucesso', response)));
+        //popup cadastro realizado
+        this.popupService.abrirPopUp();
+        //Após o envio reseta o form e volta para Login
+        this.formEmpresa.reset();
+
+        this.router.navigate(['/login']);
+
       } (error: any) => {
         //Lidar com erros, se houver algum
         console.error('Erro ao enviar os dados', error);
@@ -49,7 +59,7 @@ export class ContaEmpresaComponent{
 
     }
 
-    isFieldInvalid(field: string) {
+    isFieldInvalid(field: any) {
 
       return (
         (!this.formEmpresa.get(field)?.valid && this.formEmpresa.get(field)?.touched) ||

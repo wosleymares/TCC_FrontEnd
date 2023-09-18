@@ -1,65 +1,52 @@
 
-<form>
+<div class="signin-form">
+  <mat-card-content>
+    <mat-card>
+        <form  [formGroup]="formProduct" (ngSubmit)="salvarDados()">
+          <mat-card-header>
+              <mat-card-title>Insira seu Anuncio!</mat-card-title>
+          </mat-card-header><br><br>
 
-  <h4>Crie seu anúncio</h4>
+          <mat-form-field class="full-width-input">
+            <input matInput type="text" placeholder="Titulo do anúncio" formControlName="titulo" required>
+            <mat-error *ngIf="isFieldInvalid('titulo')">
+                Informe um titulo para o anuncio!
+            </mat-error>
+          </mat-form-field>
 
-  <div class="form-group">
-      <label for="titulo">Título:</label>
-      <input type="text" placeholder="Insira um título" required>
-  </div>
+          <mat-form-field class="full-width-input">
+            <input matInput type="text" placeholder="Descrição:" formControlName="descricao"  required>
+            <mat-error *ngIf="isFieldInvalid('descricao')">
+              Coloque a descrição para o anuncio.
+            </mat-error>
+          </mat-form-field>
 
-  <div class="form-group">
-    <label for="descricao">Descrição:</label>
-    <input type="text" placeholder="informações sobre o buffet" required>
-  </div>
-  <div class="inputs">
-    <fieldset class="list"><br>
-        <h5>Itens inclusos:</h5>
-        <input type="checkbox" name="estac" id="estacio">
-        <label for="estacio">Estacionamento</label><br>
+            <mat-form-field class="full-width-input">
+                <input matInput type="number" placeholder="Valor:" formControlName="valor" required>
+                <mat-error *ngIf="isFieldInvalid('valor')">
+                  Informe o preço do anuncio.
+                </mat-error>
+              </mat-form-field>
 
-        <input type="checkbox" name="internet" id="net">
-        <label for="net">Internet</label><br>
+              <mat-form-field class="full-width-input">
+                <input matInput type="number" placeholder="Telefone:" formControlName="telefone"  required>
+                <mat-error *ngIf="isFieldInvalid('telefone')">
+                  Informe o seu contato.
+                </mat-error>
+              </mat-form-field>
 
-        <input type="checkbox" name="lazer" id="alazer">
-        <label for="alazer">Área de lazer</label><br>
+              <mat-form-field class="full-width-input">
+                <input matInput type="text" placeholder="Insira uma imagem:" formControlName="imgUrl" required>
+                <mat-error *ngIf="isFieldInvalid('imgUrl')">
+                  Insira uma imagem!
+                </mat-error>
+              </mat-form-field>
 
-        <input type="checkbox" name="jogos" id="sljogos">
-        <label for="sljogos">Salão de jogos</label><br>
-
-        <input type="checkbox" name="discoteca" id="disco">
-        <label for="disco">Discoteca</label><br>
-
-        <input type="checkbox" name="servico" id="servgarc">
-        <label for="servgarc">Serviço de garçon</label><br>
-
-        <input type="checkbox" name="piscina" id="pisc">
-        <label for="pisc">Piscina</label><br>
-
-        <input type="checkbox" name="cozinha" id="cozi">
-        <label for="cozi">Cozinha</label><br>
-    </fieldset>
-  </div>
-
-  <div class="form-group">
-    <label for="valor">Valor:</label>
-    <input type="number" placeholder="Insira um valor" required>
-  </div>
-
-  <div class="form-group">
-    <label for="contato">Contato:</label>
-    <input type="text" placeholder="Insira um contato" required>
-  </div>
-
-  <div class="image-container">
-    <input class="box-image" type="file" accept=".gif .jpg .jpeg .png" multiple><br>
-    <span class="box-text">Adicionar fotos </span>
-    <span class="box-info">JPG, GIF e PNG somente</span>
-  </div>
-
-  <div class="btn-enviar">
-      <button type="submit">Enviar anúncio</button>
-  </div>
-
-</form>
+              <div class="btn-submit">
+                <button mat-raised-button type="submit">Enviar</button>
+              </div>
+        </form>
+    </mat-card>
+  </mat-card-content>
+</div>
 
